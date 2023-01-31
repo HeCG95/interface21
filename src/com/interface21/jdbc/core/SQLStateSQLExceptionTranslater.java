@@ -57,7 +57,8 @@ public class SQLStateSQLExceptionTranslater implements SQLExceptionTranslater {
 	public DataAccessException translate(String task, String sql, SQLException sqlex) {
 		logger.warn("Translating SQLException with SQLState='" + sqlex.getSQLState() + "' and errorCode=" + sqlex.getErrorCode() + 
 						" and message=" + sqlex.getMessage() + "; sql was '" + sql + "'");
-			
+
+//		https://dev.mysql.com/doc/connector-j/8.0/en/connector-j-reference-error-sqlstates.html
 		String sqlstate = sqlex.getSQLState();
 		if (sqlstate != null && sqlstate.length() >= 2) {
 			String classCode = sqlstate.substring(0, 2);
