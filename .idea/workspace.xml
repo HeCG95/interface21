@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e76aa405-bd20-48b3-94aa-4ade4e0c9341" name="Default" comment="[M] Jdbc Package 2023-1-31 16:15:54">
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+    <list default="true" id="e76aa405-bd20-48b3-94aa-4ade4e0c9341" name="Default" comment="[M] Jdbc Package  add model 2023-2-1 11:14:48">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/tutorial.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/docs/tutorial.pdf" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -282,7 +281,7 @@
       <workItem from="1675147771572" duration="4298000" />
       <workItem from="1675161493187" duration="8179000" />
       <workItem from="1675175592897" duration="1337000" />
-      <workItem from="1675216479487" duration="4664000" />
+      <workItem from="1675216479487" duration="13028000" />
     </task>
     <task id="LOCAL-00001" summary="[M] Jdbc Package 2023-1-30 22:49:31">
       <created>1675090192389</created>
@@ -298,7 +297,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675152959007</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="[M] Jdbc Package  add model 2023-2-1 11:14:48">
+      <created>1675221298528</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1675221298528</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -374,7 +380,8 @@
     <option name="CHECK_NEW_TODO" value="false" />
     <MESSAGE value="[M] Jdbc Package 2023-1-30 22:49:31" />
     <MESSAGE value="[M] Jdbc Package 2023-1-31 16:15:54" />
-    <option name="LAST_COMMIT_MESSAGE" value="[M] Jdbc Package 2023-1-31 16:15:54" />
+    <MESSAGE value="[M] Jdbc Package  add model 2023-2-1 11:14:48" />
+    <option name="LAST_COMMIT_MESSAGE" value="[M] Jdbc Package  add model 2023-2-1 11:14:48" />
   </component>
   <component name="VgoProject">
     <integration-enabled>false</integration-enabled>
