@@ -22,7 +22,8 @@ import org.aopalliance.intercept.MethodInvocation;
 
 /**
  * AOP 联盟
- * Spring implementation of AOP Alliance MethodInvocation interface 
+ * Spring implementation of AOP Alliance MethodInvocation interface
+ * 通常用于 AOP（面向切面编程）代理内部，以便在调用目标方法时能够插入自定义的行为
  * @author Rod Johnson
  * @version $Id$
  */
@@ -34,18 +35,28 @@ public class MethodInvocationImpl implements MethodInvocation {
 	 */
 	private final Class targetInterface;
 
+	/**
+	 * 被调用的方法对象
+	 */
 	private final Method method;
-	
+
+	/**
+	 * 方法调用时的参数列表
+	 */
 	private final Object[] arguments;
 	
 	/**
+	 * 实际被调用的目标对象
 	 * Not final as it can be set during invocations
 	 */
 	private Object target;
 	
 	private final Object proxy;
 	
-	/** Interceptors invoked in this list */
+	/**
+	 * 拦截器链，用于在方法调用前后执行自定义逻辑
+	 * Interceptors invoked in this list
+	 */
 	public final List interceptors;
 	
 	/** 
@@ -204,6 +215,8 @@ public class MethodInvocationImpl implements MethodInvocation {
 	}
 
 	/**
+	 * 执行方法调用
+	 * 首先执行拦截器链中的拦截器，如果所有拦截器都执行完毕，最终调用目标方法
 	 * @see org.aopalliance.intercept.Invocation#proceed
 	 */
 	public Object proceed() throws Throwable {
