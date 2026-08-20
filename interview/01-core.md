@@ -50,6 +50,20 @@ public interface HasRootCause {
 ```
 统一暴露根因异常。Javadoc 明说 **"This will no longer be necessary in Java 1.4"**——这是 Java 1.4 异常链（`Throwable.initCause`）出现前的过渡方案。是面试点"Spring 为什么自建异常体系"的直接出处。
 
+```text
+java.lang.RuntimeException
+        ↓
+org.springframework.core.NestedRuntimeException 【Spring根异常，支持嵌套cause】
+├─ BeansException                 // IOC Bean相关异常
+├─ ApplicationContextException    // 上下文容器异常
+├─ TransactionException          // 事务异常
+└─ DataAccessException            // 数据访问根异常（最重要）
+    ├─ DuplicateKeyException      // 唯一键冲突
+    ├─ OptimisticLockingFailureException // 乐观锁失败
+    ├─ QueryTimeoutException     // 查询超时
+    └‑‑‑ 其它数据访问子类异常
+```
+
 ### `Ordered` — `src/com/interface21/core/Ordered.java`
 ```java
 public interface Ordered {
