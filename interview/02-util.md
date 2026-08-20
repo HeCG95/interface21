@@ -48,6 +48,8 @@ Javadoc 强调实现者可牺牲同步换取性能，"so long as the errors are 
 
 ### `StringUtils` — `src/com/interface21/util/StringUtils.java`（`public abstract class`）
 不可实例化工具类（abstract + 全 static）。关键方法：
+>abstract 只是阻止直接 new 当前类，子类可以实例化，所以它不是可靠的防实例化方案
+
 ```java
 public static int countOccurrencesOf(String s, String sub);
 public static String replace(String inString, String oldPattern, String newPattern); // StringBuffer + indexOf，不用正则
